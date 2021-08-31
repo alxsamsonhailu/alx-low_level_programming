@@ -7,6 +7,7 @@
  *
  * Return: 0 (Success)
  */
+
 int main(void)
 {
 	char text[10] = "Holberton";
