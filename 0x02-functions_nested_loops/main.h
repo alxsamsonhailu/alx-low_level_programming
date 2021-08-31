@@ -1,53 +1,17 @@
-#include "main.h"
-/**
- * times_table - prints the times table
- * @n: integer for which the times table will be printed
- *
- * Description: prints the times table
- *
- * Return: void
- */
+int _putchar(char);
+void print_alphabet(void);
+void print_alphabet_x10(void);
+int _islower(int c);
+int _isalpha(int c);
+int print_sign(int n);
+int _abs(int);
+int print_last_digit(int);
+void jack_bauer(void);
+void times_table(void);
+int add(int, int);
+void print_to_98(int n);
 
-void print_times_table(int n)
-{
-	int row, column, product;
-
-	if (n >= 0 && n < 15)
-	{
-		for (row = 0; row <= n; row++)
-		{
-			for (column = 0; column <= n; column++)
-			{
-				product = row * column;
-
-				if (column == 0)
-					_putchar('0');
-				else if (product < 10)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(product % 10 + '0');
-				}
-				else if (product >= 10 && product < 100)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar((product / 10) % 10 + '0');
-					_putchar(product % 10 + '0');
-				}
-				else if (product > 99 && product < 1000)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(product / 100 + '0');
-					_putchar((product / 10) % 10 + '0');
-					_putchar(product % 10 + '0');
-				}
-			}
-			_putchar('\n');
-		}
-	}
-}
+void print_times_table(int n);
+void print_one_digit(int res, int j);
+void print_two_digits(int res);
+void print_three_digits(int res);
