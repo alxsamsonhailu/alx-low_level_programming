@@ -37,3 +37,24 @@ int main(void)
 	printf("%s\n", key);
 	return (0);
 }
+/**
+ * substract_key - Rests one to each char of string
+ * @key: key to be printed as output
+ * @len: length of key
+ * @checksum: Sum of all the ascii codes in key
+ *
+ */
+void substract_key(char key[], int len, int checksum)
+{
+	int i;
+	char c;
+	for (i = 0; i < len && checksum != 2772; i++)
+	{
+		c = key[i] - 1;
+		if (c >= '0' && c <= '9')
+		{
+			key[i] = c;
+			checksum--;
+		}
+	}
+}
