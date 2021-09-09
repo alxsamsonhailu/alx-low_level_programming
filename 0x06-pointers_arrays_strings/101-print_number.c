@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 int reverse_punit(int);
 void print_rev(int);
