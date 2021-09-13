@@ -1,16 +1,35 @@
 #include "main.h"
 
 /**
- * print_chessboard - Prints a chessboard
- * @a: Pointer to the first element of board
- */
-void print_chessboard(char (*a)[8])
+ * _strstr - locates a substring
+ * @haystack: string to search through
+ * @needle: string to match
+ * Return: pointer to initial segment of haystack
+@@ -11,6 +11,7 @@ char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
-	for (i = 0; i < 8; i++)
+	int i, j, start;
+	int nlen = 0;
+
+	i = 0;
+	j = 0;
+	start = 0;
+	while (needle[nlen] != '\0')
 	{
-		for (j = 0; j < 8; j++)
-			_putchar(a[i][j]);
-		_putchar('\n');
+		nlen++;
 	}
+	for (i = 0; haystack[i] != '\0'; i++)
+	{
+		for (j = 0; j < nlen && haystack[i] == needle[j]; j++, i++)
+		{
+			if (j == 0)
+			{
+				start = i;
+			}
+			if (j == nlen - 1)
+			{
+				return (haystack + start);
+			}
+		}
+	}
+	return (0);
 }
