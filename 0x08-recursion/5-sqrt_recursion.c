@@ -5,7 +5,15 @@ int brute_force_sqrt(int, int);
 int newton_sqrt(int, int);
 
 /**
-@@ -16,7 +18,25 @@ int _sqrt_recursion(int n)
+ * _sqrt_recursion - Calculates the power x raised to y
+ * @n: Number to calculate the square root of
+ *
+ * Return: Natural square root of n
+ */
+int _sqrt_recursion(int n)
+{
+	if (n < 0)
+		return (-1);
 	if (n <= 1)
 		return (n);
 
@@ -31,10 +39,15 @@ int brute_force_sqrt(int n, int factor)
 }
 
 /**
-@@ -28,13 +48,16 @@ int _sqrt_recursion(int n)
+ * newton_sqrt - Calculates the sqrt root of n based on Newton's rule
+ * @n: Num to calculate the sqrt root
+ * @x: Guess of sqrt root
+ *
+ * Return: Natural sqrt root of n
  */
 int newton_sqrt(int n, int x)
 {
+	int root = (x + (n / x)) / 2;
 	/*
 	 * This method needs to handle overflow, that's why the cast is needed
 	 */
