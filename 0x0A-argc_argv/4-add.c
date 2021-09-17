@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 int is_number(char *);
+
 /**
  * main - Entry point
  * @argc: Number of arguments passed to the program
@@ -8,6 +9,7 @@ int is_number(char *);
  *
  * Return: Always 0
  */
+
 int main(int argc, char *argv[])
 {
 	int i;
